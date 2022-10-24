@@ -1,0 +1,65 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  transition: .3s;
+
+  &Hidden {
+    opacity: 0;
+  }
+}
+
+.checkbox {
+  position: relative;
+
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid $borderColor;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%,);
+
+    width: 50%;
+    height: 50%;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    @include defaultTransition;
+  }
+
+  &Active {
+    &::after {
+      background-color: $whiteText;
+    }
+
+    & + .label {
+      color: $whiteText;
+    }
+  }
+
+  &Disabled {
+    pointer-events: none;
+  }
+}
+
+.label {
+  margin-left: 10px;
+
+  color: $greyText;
+
+  @include defaultTransition;
+}

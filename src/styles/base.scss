@@ -1,0 +1,32 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+span {
+  display: block;
+}
+
+ul {list-style: none}
+
+a, a:checked {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, button, textarea {
+  outline: none;
+  border: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}

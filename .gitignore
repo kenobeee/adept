@@ -1,0 +1,10 @@
+build
+node_modules
+package-lock.json
+
+.idea
+.idea/
+.idea/workspace.xml
+.idea/vcs.xml
+
+.DS_store

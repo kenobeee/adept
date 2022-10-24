@@ -1,0 +1,10 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.row {
+  @include tableRow;
+
+  &Selected span {
+      color: $whiteText;
+  }
+}

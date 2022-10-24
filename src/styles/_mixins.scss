@@ -1,0 +1,75 @@
+@import "./vars";
+
+// common
+
+@mixin defaultTransition {
+  transition: .3s;
+}
+
+@mixin headerIcon {
+  width: 20px;
+  height: 20px;
+}
+
+@mixin defaultBgOptions {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// table
+
+$checkboxWidth: 4%;
+$thirdColumn: 10%;
+
+@mixin tableColumnWidthsByQty($qty) {
+  margin-left: 1%;
+
+  width: calc((100% - #{$checkboxWidth} - #{$thirdColumn}) / #{$qty - 2});
+
+  text-align: center;
+
+  &:first-child {
+    margin-left: 0;
+
+    width: $checkboxWidth;
+  }
+
+  &:nth-child(3) {
+    width: $thirdColumn;
+  }
+}
+
+@mixin tableRow {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 22px;
+
+  height: 60px;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 98%;
+    height: 1px;
+
+    background-color: $borderColor;
+  }
+}
+
+@mixin tableText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.1px;
+  text-align: center;
+  color: $greyText;
+}

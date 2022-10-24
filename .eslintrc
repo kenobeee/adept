@@ -1,0 +1,73 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint", "react", "react-hooks"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "object-curly-spacing": ["error", "never"],
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    "keyword-spacing": ["error", { "before": true }],
+    "semi": [2, "always"],
+    "quotes": [2, "single"],
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": ["const", "let", "var", "function", "if", "for"], "next": "*"},
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]},
+      { "blankLine": "never", "prev": ["switch", "default", "break", "case"], "next": ["switch", "default", "break", "case"]}
+    ],
+    "newline-before-return": "warn",
+    "operator-linebreak": [2, "before", { "overrides": { "+=": "none", "&&": "after" } }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/type-annotation-spacing": ["error", { "before": false, "after": false, "overrides": { "arrow": { "before": true, "after": true }} }],
+    "no-multiple-empty-lines": ["warn", { "max": 1, "maxBOF": 1}],
+    "@typescript-eslint/semi" : [ "error" ],
+    "jsx-a11y/no-autofocus": 0,
+    "consistent-return": "error",
+    "no-else-return": "error",
+    "no-var": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "implicit-arrow-linebreak": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/state-in-constructor": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "arrow-body-style": [
+      "warn", "as-needed", {
+        "requireReturnForObjectLiteral": false
+      }],
+    "max-len": [
+      "error",
+      {
+        "code": 130,
+        "ignoreStrings": true,
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "camelcase": 0
+  }
+}

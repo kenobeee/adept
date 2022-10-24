@@ -1,0 +1,80 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "build",
+    "paths": {
+      "assets": [
+        "assets"
+      ],
+      "assets/*": [
+        "assets/*"
+      ],
+      "components": [
+        "components"
+      ],
+      "components/*": [
+        "components/*"
+      ],
+      "config": [
+        "config"
+      ],
+      "config/*": [
+        "config/*"
+      ],
+      "data": [
+        "data"
+      ],
+      "data/*": [
+        "data/*"
+      ],
+      "store": [
+        "store"
+      ],
+      "store/*": [
+        "store/*"
+      ],
+      "styles": [
+        "styles"
+      ],
+      "styles/*": [
+        "styles/*"
+      ],
+      "types": [
+        "types"
+      ],
+      "types/*": [
+        "types/*"
+      ],
+      "utils": [
+        "utils"
+      ],
+      "utils/*": [
+        "utils/*"
+      ]
+    },
+    "allowJs": true,
+    "sourceMap": true,
+
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "react",
+    "declaration": false,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2019",
+      "dom"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
